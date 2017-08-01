@@ -1,0 +1,12 @@
+logging:
+  level: INFO
+  loggers:
+    "org.col": DEBUG
+    "net.ozwolf.raml": DEBUG
+  appenders:
+    - type: console
+db:
+  host: localhost
+  database: taxclear
+  user: markus
+  password:
