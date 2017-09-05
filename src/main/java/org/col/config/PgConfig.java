@@ -25,7 +25,7 @@ public class PgConfig {
     public int maximumPoolSize = 8;
 
     /**
-     * TThe minimum number of idle connections that the pool tries to maintain.
+     * The minimum number of idle connections that the pool tries to maintain.
      * If the idle connections dip below this value, the pool will make a best effort to add additional connections quickly and efficiently.
      * However, for maximum performance and responsiveness to spike demands, it is recommended to set this value not too low.
      * Beware that postgres statically allocates the work_mem for each session which can eat up memory a lot.

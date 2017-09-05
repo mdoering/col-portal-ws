@@ -3,10 +3,10 @@ package org.col;
 import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
-import net.ozwolf.raml.RamlView;
 import org.col.config.WsConfig;
 import org.col.db.MybatisBundle;
 import org.col.resources.NameResource;
+import org.col.tasks.hello.HelloTask;
 
 public class WsApp extends Application<WsConfig> {
 
@@ -23,7 +23,6 @@ public class WsApp extends Application<WsConfig> {
     public void initialize(final Bootstrap<WsConfig> bootstrap) {
         // TODO: application initialization
         bootstrap.addBundle(new MybatisBundle());
-        bootstrap.addBundle(RamlView.bundle("/Users/markus/code/colplus/api/nomenclator.raml"));
     }
 
     @Override
@@ -35,6 +34,10 @@ public class WsApp extends Application<WsConfig> {
 
         // resources
         environment.jersey().register(new NameResource());
+
+        // tasks
+        environment.admin().addTask(new HelloTask());
+
 
     }
 

@@ -5,7 +5,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.col.api.Name;
 import org.col.api.vocab.Rank;
 import org.col.db.mapper.NameMapper;
-import org.col.util.NameParser;
+import org.col.parser.NameParser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

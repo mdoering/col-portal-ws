@@ -1,4 +1,4 @@
-package org.col.util;
+package org.col.parser;
 
 import org.col.api.Name;
 import org.col.api.vocab.NamePart;
